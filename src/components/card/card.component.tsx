@@ -1,6 +1,10 @@
 import "./card.style.css";
+import { Hero } from "../../App";
 
-const Card = ({ hero }) => {
+type CardProps = {
+  hero: Hero;
+};
+const Card = ({ hero }: CardProps) => {
   const { id, name, email } = hero;
   return (
     <div className="card-container" key={id}>
